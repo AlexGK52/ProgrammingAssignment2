@@ -44,5 +44,57 @@ cacheSolve <- function(x, ...) {
     }
 }
 
-# Please don't send me other student works -- I am tired to check students works
-# and I will not to review them 
+## Tests:
+## mat <- matrix(c(7,4,5,3), 2, 2)
+## mat
+#     [,1] [,2]
+#[1,]    7    5
+#[2,]    4    3
+## cacheMat <- makeCacheMatrix(mat)
+## cacheMat$get()
+#     [,1] [,2]
+#[1,]    7    5
+#[2,]    4    3
+## cacheMat$getInvMatrix()
+## NULL
+## invMat <- cacheSolve(cacheMat)
+## invMat
+#     [,1] [,2]
+#[1,]    3   -5
+#[2,]   -4    7
+## round(invMat %*% mat)
+#     [,1] [,2]
+#[1,]    1    0
+#[2,]    0    1
+## mat <- c(7,4,5,3)
+## > mat
+## [1] 7 4 5 3
+## > cacheMat <- makeCacheMatrix(mat)
+## > invMat <- cacheSolve(cacheMat)
+## x is not matrix or is not square matrix
+## > mat <- matrix(c(1,2,3,4,5,6,7,8,9), 3, 3)
+## > cacheMat <- makeCacheMatrix(mat)
+## > invMat <- cacheSolve(cacheMat)
+## There is no inverse matrix, determinant is zero
+## > mat <- matrix(c(1,2,3,4,5,6), 2, 3)
+## > cacheMat <- makeCacheMatrix(mat)
+## > invMat <- cacheSolve(cacheMat)
+## x is not matrix or is not square matrix
+## > mat <- matrix(c(7,4,5,3), 2, 2)
+## > cacheMat <- makeCacheMatrix(mat)
+## > invMat <- cacheSolve(cacheMat)
+## > invMat
+##      [,1] [,2]
+## [1,]    3   -5
+## [2,]   -4    7
+## > invMat <- cacheSolve(cacheMat)
+## getting cached inverse Matrix
+## > invMat <- cacheSolve(cacheMat)
+## getting cached inverse Matrix
+## > cacheMat$set(matrix(c(7,4,5,3),2,2))
+## > invMat <- cacheSolve(cacheMat)
+## > invMat
+##      [,1] [,2]
+## [1,]    3   -5
+## [2,]   -4    7
+
